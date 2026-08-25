@@ -1,10 +1,23 @@
+import {
+  PACKET_URL,
+  stories as lakefront,
+  sources,
+  TIP_MAIL,
+  type Block,
+} from "../series";
+
+export type CivicBlock = Block;
+
 export type CivicStory = {
   slug: string;
   kicker: string;
   title: string;
   dek: string;
   date: string;
-  body: string[];
+  image?: string;
+  imageAlt?: string;
+  imageCredit?: string;
+  body: CivicBlock[] | string[];
   documents: { label: string; href?: string }[];
 };
 
@@ -13,7 +26,31 @@ export const CIVIC_MANIFESTO = {
   dek: "Sheboygan does not have a people problem. It has a coverage problem, a documents problem, and a habit of hoping City Hall will explain itself. The civic desk exists so it doesn't have to.",
 };
 
-export const CIVIC_STORIES: CivicStory[] = [
+const SERIES_DOCS = [
+  {
+    label: "Public Works Committee packet, July 27, 2026 (PDF)",
+    href: PACKET_URL,
+  },
+  ...sources
+    .filter((s) => s.href)
+    .map((s) => ({ label: s.label, href: s.href })),
+  { label: "Tip line — ishevegas@gmail.com", href: TIP_MAIL },
+];
+
+const LAKEFRONT_STORIES: CivicStory[] = lakefront.map((s) => ({
+  slug: s.id,
+  kicker: `Lakefront Series · ${s.num}`,
+  title: s.title,
+  dek: s.dek,
+  date: "August 2026",
+  image: s.image,
+  imageAlt: s.imageAlt,
+  imageCredit: s.imageCredit,
+  body: s.body,
+  documents: SERIES_DOCS,
+}));
+
+const DESK_STORIES: CivicStory[] = [
   {
     slug: "how-the-desk-works",
     kicker: "Method",
@@ -90,6 +127,18 @@ export const CIVIC_STORIES: CivicStory[] = [
   },
 ];
 
+export const CIVIC_STORIES: CivicStory[] = [...LAKEFRONT_STORIES, ...DESK_STORIES];
+
+export const SERIES_SLUGS = new Set(lakefront.map((s) => s.id));
+
 export function getStory(slug: string) {
   return CIVIC_STORIES.find((s) => s.slug === slug);
+}
+
+export function storyBlocks(story: CivicStory): CivicBlock[] {
+  if (story.body.length === 0) return [];
+  if (typeof story.body[0] === "string") {
+    return (story.body as string[]).map((text) => ({ kind: "p" as const, text }));
+  }
+  return story.body as CivicBlock[];
 }
