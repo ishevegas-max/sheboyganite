@@ -1,112 +1,239 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-edition="com">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Sheboyganite — SheVegas</title>
-<meta name="description" content="Sheboyganite is the funnel for everything Sheboygan — archive, civic desk, and night. SheVegas is the nickname."/>
-<meta name="theme-color" content="#09090b"/>
-<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="/styles.css"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SheVegas.com</title>
+  <meta name="description" content="SheVegas. The Sheboygan Lakefront Series. Original sources. Fun and honesty." />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta property="og:title" content="SHEVEGAS" />
+  <meta property="og:description" content="The Sheboygan Lakefront Series. Photographs and drone: Mike Brunette." />
+  <meta property="og:image" content="/og.jpg" />
+  <style>
+    :root { --bg:#fff; --fg:#000; --muted:#222; --line:#000; }
+    html[data-edition="org"] { --bg:#000; --fg:#fff; --muted:#ddd; --line:#fff; color-scheme: dark; }
+    html[data-edition="com"] { color-scheme: light; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--bg); color: var(--fg); font-family: Georgia, "Times New Roman", Times, serif; }
+    a { color: inherit; }
+    img, video { display: block; width: 100%; height: auto; background: var(--bg); }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .sr-only:focus { position: absolute; width: auto; height: auto; margin: 0; overflow: visible; clip: auto; white-space: normal; left: 1rem; top: 1rem; z-index: 50; background: var(--fg); color: var(--bg); padding: .5rem .75rem; }
+    ::selection { background: var(--fg); color: var(--bg); }
+    header { border-bottom: 1px solid var(--line); padding: 2rem 1.25rem; }
+    h1 { margin: .5rem 0 0; font-size: 2.5rem; line-height: 1; letter-spacing: -0.02em; }
+    @media (min-width: 640px) { h1 { font-size: 3rem; } header, .cap-bleed, nav, main, footer { padding-left: 2rem; padding-right: 2rem; } }
+    .lede { margin: .75rem 0 0; max-width: 36rem; font-size: 1.25rem; line-height: 1.6; }
+    .editions { margin: 1rem 0 0; display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; font-size: 1.25rem; }
+    .on { text-decoration: none; }
+    figure { margin: 0; }
+    .bleed { border-bottom: 1px solid var(--line); }
+    .cap-bleed { padding: .75rem 1.25rem; font-size: 1rem; }
+    figcaption { margin-top: .5rem; font-size: 1rem; }
+    nav { border-bottom: 1px solid var(--line); padding: 1.5rem 1.25rem; }
+    ol { max-width: 42rem; margin: 0; padding: 0; list-style: none; }
+    ol li { margin: 0 0 .75rem; font-size: 1.25rem; line-height: 1.35; }
+    main { padding: 2.5rem 1.25rem; }
+    .col { max-width: 42rem; margin: 0 auto; }
+    article { border-bottom: 1px solid var(--line); padding: 3rem 0; }
+    article:first-child { padding-top: 0; }
+    article { scroll-margin-top: 1.5rem; }
+    .kicker { font-size: 1rem; }
+    h2 { margin: .5rem 0 0; font-size: 1.875rem; line-height: 1.15; }
+    @media (min-width: 640px) { h2 { font-size: 2.25rem; } }
+    .body { margin-top: 1.5rem; }
+    .body p { margin: 0 0 1.25rem; font-size: 1.25rem; line-height: 1.65; }
+    .op { margin-top: 1.5rem; font-size: 1.25rem; line-height: 1.65; }
+    footer { padding: 2.5rem 1.25rem; }
+    footer .col p { margin: 0 0 1rem; font-size: 1.25rem; line-height: 1.65; }
+  </style>
 </head>
 <body>
-<header class="site">
-  <div class="wrap bar">
-    <a class="brand" href="/"><em>Sheboyganite</em><small>SheVegas</small></a>
-    <nav class="desk"><a class="" href="/archive/">Archive</a><a class="" href="/civic/">Civic</a><a class="" href="/night/">Night</a><a class="" href="/about/">About</a></nav>
-    <button class="menu-btn" type="button" onclick="document.body.classList.toggle('nav-open')">Menu</button>
-  </div>
-  <nav class="mobile"><a href="/archive/"><span>Archive</span><span class="subtle">shevegas.com</span></a><a href="/civic/"><span>Civic</span><span class="subtle">shevegas.org</span></a><a href="/night/"><span>Night</span><span class="subtle">sheboygannight.com</span></a><a href="/about/"><span>About</span></a></nav>
-</header>
+  <a class="sr-only" href="#stories">Skip to stories</a>
+  <header>
+    <p id="here-label">shevegas.com</p>
+    <h1>SHEVEGAS</h1>
+    <p class="lede" id="lede">black type on a white page. Same stories, white type on a black page, at <a id="other-top" href="https://shevegas.org">shevegas.org</a>.</p>
+    <p class="editions">
+      <a id="link-com" href="https://shevegas.com" class="on" aria-current="page">shevegas.com</a>
+      <a id="link-org" href="https://shevegas.org">shevegas.org</a>
+    </p>
+  </header>
 
-<section class="hero">
-  <img class="bg" src="https://raw.githubusercontent.com/ishevegas-max/sheboyganite/main/public/images/harbor.jpg" alt="Sheboygan harbor at night on Lake Michigan"/>
-  <div class="shade"></div>
-  <div class="copy">
-    <p class="kicker">sheboyganite.com · Tuesday, August 25, 2026</p>
-    <h1>Sheboyganite.</h1>
-    <p class="lede">Everything Sheboygan, for people from Sheboygan. SheVegas is the nickname. This is the funnel — archive, civic desk, and night guide, one front door.</p>
-    <div class="row">
-      <a class="btn" href="/archive/">How it started →</a>
-      <a class="btn ghost" href="/night/">Tonight in town</a>
+  <figure class="bleed">
+    <video poster="/images/groin-wide.jpg" src="/video/southside.mp4" controls playsinline muted loop preload="metadata" autoplay aria-label="Mike Brunette standing on the old southside groin, Lake Michigan stretching out"></video>
+    <figcaption class="cap-bleed">Southside shore. Drone: Mike Brunette.</figcaption>
+  </figure>
+
+  <nav aria-label="Stories">
+    <ol>
+      <li><a href="#southside">1. The southside is about to become a road</a></li>
+      <li><a href="#kite">2. Malibu is what's ending Kite Beach</a></li>
+      <li><a href="#ledgers">3. Three ledgers. One appetite.</a></li>
+      <li><a href="#numbers">4. 1.14 miles of wild shore, gone</a></li>
+      <li><a href="#origin">5. How SheVegas was born</a></li>
+      <li><a href="#about">6. Fun and honesty. That's the deal.</a></li>
+    </ol>
+  </nav>
+
+  <main id="stories">
+    <div class="col">
+      <article id="southside">
+        <figure>
+          <img src="/images/groin-peace.jpg" alt="Mike Brunette on the southside groin in Lake Michigan" />
+          <figcaption>On the old groin. Drone: Mike Brunette.</figcaption>
+        </figure>
+        <p class="kicker">The Sheboygan Lakefront Series · 1 of 4</p>
+        <h2>The southside is about to become a road</h2>
+        <div class="body">
+          <p>If you've walked the shoreline south of King Park any time in the last forty years, you know the routine: pick your way down the bank, follow the narrow strip of sand, watch the manholes. Those concrete cylinders are the lids of a 96-year-old secret — the southside interceptor, a trunk sewer buried since 1930 that carries nearly half of Sheboygan's sewage to the plant at the foot of Lakeshore Drive.</p>
+          <p>That shoreline is about to be gone. Not eroded away. Replaced. On purpose, with federal money, by design.</p>
+          <p>FEMA approved a Hazard Mitigation Grant for the southside interceptor. About 6,000 feet of lakeshore — from the wastewater treatment plant to High Avenue — gets a stone revetment. The armor is 1-to-2-ton boulders, four feet thick. On top of that, and along the entire mile-plus, the city is building a 12-foot-wide crushed-stone access road.</p>
+          <p>Read that again. They are not just armoring the shoreline. They are building a road along the lake.</p>
+          <p>The tell is in the funding. $1.82 million in "ineligible costs" — work FEMA will not cover — includes repaving and enlarging the parking lot at the end of High Avenue. A four-way stop already went in there.</p>
+          <p>The whole project is $11.9 million. FEMA is putting in $7.8 million. The completion deadline in the paperwork is February 14, 2028.</p>
+          <p>A hazard grant is supposed to keep a sewer from failing into Lake Michigan. That part is real. A 96-year-old trunk line sitting in an eroding bank is a genuine problem. The question is what else got packed into the same job: a road, a bigger lot, a new stop, a new way to arrive at the water by car.</p>
+          <p>The July 27, 2026 Public Works packet is the source. It is public. It is a PDF. It does not say we are converting the informal southside shore into a constructed lakefront. It itemizes stone, pipe, and a parking lot FEMA itself marked ineligible.</p>
+        </div>
+        <p class="op"><strong>Opinion, labeled.</strong> This project is a tourism amenity wearing a hard hat. The sewer protection is real. The parking lot is the play. Say so.</p>
+      </article>
+
+      <article id="kite">
+        <figure>
+          <video poster="/images/kite-lot.jpg" src="/video/kite-beach.mp4" controls playsinline muted loop preload="metadata" aria-label="The grass lot at Kite Beach, kites on the lawn, cars parked, Lake Michigan beyond"></video>
+          <figcaption>Kite Beach — the grass lot. Drone: Mike Brunette.</figcaption>
+        </figure>
+        <p class="kicker">The Sheboygan Lakefront Series · 2 of 4</p>
+        <h2>Malibu is what's ending Kite Beach</h2>
+        <div class="body">
+          <p>The interceptor armor stops south of King Park. It does not bury Kite Beach.</p>
+          <p>What ends the launch is Project Malibu: about 210 apartments at 1403 South 7th Street / Clara Avenue, on the grassy lot the kite and windsurf community used to park, rig, and launch.</p>
+          <p>Groundbreaking was May 2025. The money is TID 21 money — tax increment, which means the extra property tax from the new building is pledged to the district instead of the general fund.</p>
+          <p>The sand stays public by contract. That sentence will get repeated. It is true and it is not the point.</p>
+          <p>Kite Beach was never just sand. It was a free staging ground: room to park, to lay out lines, to rig a kite, to wait on wind, to teach a kid, to leave a board for twenty minutes without buying a slip or a garage. The sand without the lot is a beach you can look at. It is not a launch.</p>
+          <p>The interceptor job and Malibu are not the same project. They are in the same three-year window, on the same stretch of city, approved by the same government. One uses FEMA and the wastewater fund. The other uses a tax district. If you only read one press release, you miss the other half of the water.</p>
+        </div>
+      </article>
+
+      <article id="ledgers">
+        <figure>
+          <video poster="/images/marina-mike.jpg" src="/video/marina.mp4" controls playsinline muted loop preload="metadata" aria-label="Mike Brunette at Harbor Centre Marina"></video>
+          <figcaption>Harbor Centre Marina. Drone: Mike Brunette.</figcaption>
+        </figure>
+        <p class="kicker">The Sheboygan Lakefront Series · 3 of 4</p>
+        <h2>Three ledgers. One appetite.</h2>
+        <div class="body">
+          <p>This is not one hidden plan. It is three budgets pointed at one lakefront, moving through one Public Works committee.</p>
+          <p>Ledger one: TID 21. It pays Project Malibu and marina design.</p>
+          <p>Ledger two: the Wastewater Fund plus the FEMA hazard grant. It pays the southside interceptor, the revetment, and the access road. FEMA split that job in writing. The parking lot sits in the ineligible bucket — a federal reviewer saying the lot is not required hazard mitigation.</p>
+          <p>Ledger three: Harbor Centre Marina. It sits inside a $77 million vision. Only phase one is funded.</p>
+          <p>Three names. Three funding streams. One shoreline. 2023 to 2028.</p>
+          <p>Cities do this because it works. A sewer job sounds like maintenance. An apartment building sounds like housing. A marina vision sounds like economic development. Each one has its own public hearing, its own acronym, its own friendly rendering. Nobody has to publish the sentence: we are rebuilding the lakefront.</p>
+          <p>SheVegas publishes the sentence. Follow the money across the ledgers they hope you will not add up.</p>
+        </div>
+      </article>
+
+      <article id="numbers">
+        <figure>
+          <img src="/images/groin-wide.jpg" alt="Aerial of the southside groin and informal Lake Michigan shore" />
+          <figcaption>The informal shore. Drone: Mike Brunette.</figcaption>
+        </figure>
+        <p class="kicker">The Sheboygan Lakefront Series · 4 of 4</p>
+        <h2>1.14 miles of wild shore, gone</h2>
+        <div class="body">
+          <p>When the work is done, 1.14 miles of informal southside shore — the kind you walk, not the kind you enter through a lot — becomes rock and a road.</p>
+          <p>Kite Beach keeps the sand and loses the lot.</p>
+          <p>Harbor Centre Marina reconfigures docks, the admin building, and parking.</p>
+          <p>Three zones. One Public Works Committee. The window is 2023 through 2028.</p>
+          <p>Wild shore is not a park name. It is what the southside was: unarmored, un-ticketed, a place you reached on foot. A crushed-stone access road is not a trail. It is a road. It is 12 feet wide. It is being built with hazard money on top of a sewer.</p>
+          <p>The primary source is the July 27, 2026 Public Works packet. Read it yourself.</p>
+        </div>
+        <p class="op">Source: <a href="https://mccmeetings.blob.core.usgovcloudapi.net/sheboygnwi-pubu/MEET-Packet-e722495ab18c470f8a186bbc730ff4fd.pdf" target="_blank" rel="noreferrer">July 27, 2026 Public Works packet (PDF)</a>.</p>
+      </article>
+
+      <article id="origin">
+        <figure>
+          <img src="/images/mike-son.jpg" alt="Mike Brunette with family at Lake Michigan" />
+          <figcaption>Lake Michigan. Photo: Mike Brunette.</figcaption>
+        </figure>
+        <p class="kicker">How the name happened</p>
+        <h2>How SheVegas was born</h2>
+        <div class="body">
+          <p>Not a chamber slogan. A liquor-store nickname that stuck because the journalism did.</p>
+          <p>Every city has a nickname. Some are earned, some are imposed, and some are fought over. Sheboygan's is SheVegas — and it did not come from a marketing firm, a city hall press release, or a chamber of commerce brainstorming session.</p>
+          <p>It came from a liquor store on South 26th Street, a group of skeptical friends, and a photojournalist who decided his hometown deserved better coverage than it was getting.</p>
+          <p>Sheboygan in the mid-2000s: one newspaper, one radio station, no TV news. A tourist town on Lake Michigan with 50,000 people and zero accountability journalism. City council meetings went uncovered. Development deals happened in back rooms. The armory was rotting. The quarry was fenced off. And nobody was asking why.</p>
+          <p>The names that lost: Stupid Sheboygan People (direct, not inviting). SheBaghdad (topical for 2005, grim). Kingsburia (north side, too narrow). SheVegas was the one that stuck.</p>
+          <p>"When I launched SheVegas my buddies said it sounded like a gay porn site and suggested I call my site: 'Stupid Sheboygan People.' SheBaghdad and Kingsburia almost made the cut, but, SheVegas Baby!"</p>
+          <p>What happened next: eight mayoral candidates at the peak — the most competitive race in Sheboygan history. The Armory is still standing; it was slated for demolition. Quarry Beach opened to the public for a summer. A bloggers casino rumor dominated the most spirited election cycle the city had seen. The local newspaper was forced to start covering city government seriously.</p>
+          <p>Mid-2000s: SheVegas heard in casual use. Origin uncertain. Around 2005: SheVegas.com launched by Mike Brunette from South 26th Street. 2007–2010: peak civic impact. 2016: SheVegas is the most common nickname for Sheboygan. 2026: the same stories run on shevegas.com and shevegas.org, linked to each other.</p>
+        </div>
+      </article>
+
+      <article id="about">
+        <figure>
+          <img src="/images/mike-shallows.jpg" alt="Mike Brunette walking in the shallows with a drone controller" />
+          <figcaption>In the shallows. Photo: Mike Brunette.</figcaption>
+        </figure>
+        <p class="kicker">Mike Brunette is SheVegas</p>
+        <h2>Fun and honesty. That's the deal.</h2>
+        <div class="body">
+          <p>I came back to a tourist town with one newspaper, one radio station, and no TV. I launched SheVegas because local politics is where every dollar is spent and every candidate starts.</p>
+          <p>Information must be free. Original source documents and verified first-hand accounts come before anyone's spin, including mine. You can't make any money doing honest news. When you have as much information as I do, you can have great fun.</p>
+          <p>shevegas.com is the permanent archive: black type on a white page. shevegas.org is the civic desk: white type on a black page. They publish the same stories. They link to each other.</p>
+          <p>Change systems, not people.</p>
+          <p>SHEVEGAS BABY.</p>
+        </div>
+      </article>
     </div>
-  </div>
-</section>
-<section class="hooks">
-  <article><p class="kicker">Water</p><h2>The lake</h2><p>Harbor, quarry, breakwater. The reason the town faces east.</p></article><article><p class="kicker">Paper</p><h2>City Hall</h2><p>Meetings, land, money. The civic desk lives here.</p></article><article><p class="kicker">Night</p><h2>8th Street</h2><p>The walk. Rooms that are still open when the shift ends.</p></article><article><p class="kicker">Origin</p><h2>South 26th</h2><p>Where the liquor store was. Where SheVegas started.</p></article>
-</section>
-<section class="wrap pillars">
-  <a class="card" href="/archive/">
-    <div class="ph"><img src="https://raw.githubusercontent.com/ishevegas-max/sheboyganite/main/public/images/archive.jpg" alt=""/></div>
-    <div class="pad"><p class="kicker">shevegas.com</p><h2>Archive</h2><p>The permanent record. Origin, video, source documents. Intergalactic on purpose: longevity, knowledge, communication.</p></div>
-  </a><a class="card" href="/civic/">
-    <div class="ph"><img src="https://raw.githubusercontent.com/ishevegas-max/sheboyganite/main/public/images/chamber.jpg" alt=""/></div>
-    <div class="pad"><p class="kicker">shevegas.org</p><h2>Civic</h2><p>The daily explainer. How the city actually works. Original documents first, including ours. Change systems, not people.</p></div>
-  </a><a class="card" href="/night/">
-    <div class="ph"><img src="https://raw.githubusercontent.com/ishevegas-max/sheboyganite/main/public/images/tavern.jpg" alt=""/></div>
-    <div class="pad"><p class="kicker">sheboygannight.com</p><h2>Night</h2><p>The city after dark. Bars, rooms, and the lake. Written for people from here, not a tourism brochure.</p></div>
-  </a>
-</section>
-<section class="wrap split">
-  <div>
-    <p class="kicker">From the archive</p>
-    <h2>How SheVegas Was Born</h2>
-    <p class="meta">August 15, 2026 · Mike Brunette</p>
-    <p class="prose">Every city has a nickname. Some are earned, some are imposed, and some are fought over. Sheboygan&#39;s is SheVegas — and it didn&#39;t come from a marketing firm, a city hall press release, or a chamber of commerce brainstorming session. It came from a liquor store on South 26th Street, a group of skeptical friends, and a photojournalist who decided his hometown deserved better coverage than it was getting.</p>
-    <p><a class="btn quiet" href="/archive/">Full origin story →</a></p>
-  </div>
-  <div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/4bimxhKu3bU?rel=0&playsinline=1" title="My Life" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
-</section>
-<section class="trio">
-  <div class="wrap trio-grid">
-    <article class="panel">
-      <p class="kicker">Night desk · Tuesday</p>
-      <h2>Tonight</h2>
-      <p>8th Streatery season is done for 2026. Treat Tuesday as a cocktail night — Urbane or Long House.</p>
-      <p><a class="btn quiet" href="/night/">Open the night guide →</a></p>
-    </article>
-    <article class="panel">
-      <p class="kicker">Civic</p>
-      <h2>The Southside Lakefront Is About to Become Something Else Entirely</h2>
-      <p>They&#39;re not just armoring the shoreline. They are building a road along the lake.</p>
-      <p><a class="btn quiet" href="/civic/southside/">Read the desk →</a></p>
-    </article>
-    <article class="panel">
-      <p class="kicker">Video reel</p>
-      <h2>August 6, 2026</h2>
-      <p>Ten tapes on a stack — the old shevegas.com, rebuilt so it can actually be updated.</p>
-      <p><a class="btn quiet" href="/videos/">Watch the reel →</a></p>
-    </article>
-  </div>
-</section>
-<section class="tag"><p class="big">SheVegas Baby.</p><p class="sub">Best Future Now &amp; Forever.</p></section>
-<footer class="site">
-  <div class="wrap grid">
-    <div>
-      <h3>Sheboyganite</h3>
-      <p class="kicker" style="margin-top:.4rem">SheVegas · sheboyganite.com</p>
-      <p class="muted" style="margin-top:.8rem;max-width:18rem">Everything Sheboygan, for people from Sheboygan. Sheboygan, Wisconsin. Founded 2005 by Mike Brunette.</p>
+  </main>
+
+  <footer>
+    <div class="col">
+      <p id="foot-cross">shevegas.com ↔ <a id="other-foot" href="https://shevegas.org">shevegas.org</a>. Same stories both ways.</p>
+      <p>Photographs and drone: Mike Brunette.</p>
+      <p><a href="mailto:ishevegas@gmail.com">ishevegas@gmail.com</a> · <a href="tel:+19208159162">920.815.9162</a></p>
+      <p>1925 South 26th Street · Sheboygan, WI 53081</p>
+      <p>SHEVEGAS BABY</p>
     </div>
-    <div>
-      <p class="kicker">Desks</p>
-      <ul>
-        <li><a href="/archive/">Archive <span class="subtle">shevegas.com</span></a></li><li><a href="/civic/">Civic <span class="subtle">shevegas.org</span></a></li><li><a href="/night/">Night <span class="subtle">sheboygannight.com</span></a></li><li><a href="/about/">About</a></li>
-        <li><a href="/videos/">Video reel</a></li>
-      </ul>
-    </div>
-    <div>
-      <p class="kicker">Desk</p>
-      <ul>
-        <li><a href="mailto:ishevegas@gmail.com">Submit a tip</a></li>
-        <li><a href="https://www.youtube.com/user/mikebrunette">YouTube</a></li>
-        <li><a href="https://x.com/optimikeb">X @optimikeb</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="wrap legal"><span>SheVegas Baby.</span><span>© 2026</span></div>
-</footer>
+  </footer>
+
+  <script>
+    (function () {
+      var host = (location.hostname || "").replace(/^www\./, "");
+      var org = host === "shevegas.org";
+      var edition = org ? "org" : "com";
+      document.documentElement.setAttribute("data-edition", edition);
+      document.title = org ? "SheVegas.org" : "SheVegas.com";
+      var theme = document.querySelector('meta[name="theme-color"]');
+      if (theme) theme.setAttribute("content", org ? "#000000" : "#ffffff");
+      document.getElementById("here-label").textContent = org ? "shevegas.org" : "shevegas.com";
+      document.getElementById("lede").innerHTML = org
+        ? 'white type on a black page. Same stories, black type on a white page, at <a href="https://shevegas.com">shevegas.com</a>.'
+        : 'black type on a white page. Same stories, white type on a black page, at <a href="https://shevegas.org">shevegas.org</a>.';
+      var com = document.getElementById("link-com");
+      var orgA = document.getElementById("link-org");
+      com.className = org ? "" : "on";
+      orgA.className = org ? "on" : "";
+      com.setAttribute("aria-current", org ? null : "page");
+      orgA.setAttribute("aria-current", org ? "page" : null);
+      document.getElementById("other-foot").href = org ? "https://shevegas.com" : "https://shevegas.org";
+      document.getElementById("other-foot").textContent = org ? "shevegas.com" : "shevegas.org";
+      document.getElementById("foot-cross").innerHTML = (org ? "shevegas.org" : "shevegas.com")
+        + " ↔ <a href=\"" + (org ? "https://shevegas.com" : "https://shevegas.org") + "\">"
+        + (org ? "shevegas.com" : "shevegas.org") + "</a>. Same stories both ways.";
+      document.querySelectorAll('nav a[href^="#"]').forEach(function (a) {
+        a.addEventListener("click", function (e) {
+          var id = a.getAttribute("href").slice(1);
+          var el = document.getElementById(id);
+          if (!el) return;
+          e.preventDefault();
+          el.scrollIntoView({ behavior: "auto", block: "start" });
+          history.replaceState(null, "", "#" + id);
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
