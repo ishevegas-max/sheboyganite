@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Night — SheVegas</title>
+<meta name="description" content="Everything Sheboygan, for people from Sheboygan. SheVegas Baby."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/styles.css"/>
+<link rel="icon" href="https://raw.githubusercontent.com/ishevegas-max/sheboyganite/main/public/favicon.svg" type="image/svg+xml"/>
+</head>
+<body>
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="/"><em>Sheboyganite</em><small>SheVegas</small></a>
+    <nav class="desk" aria-label="Primary">
+      <a href="/archive/" class="">Archive</a><a href="/civic/" class="">Civic</a><a href="/night/" class="active">Night</a><a href="/about/" class="">About</a>
+    </nav>
+    <button class="menu-btn" type="button" aria-label="Menu" onclick="document.body.classList.toggle('nav-open')"><span></span></button>
+  </div>
+  <nav class="mobile" aria-label="Mobile">
+    <a href="/archive/"><span>Archive</span><span class="dom">shevegas.com</span></a><a href="/civic/"><span>Civic</span><span class="dom">shevegas.org</span></a><a href="/night/"><span>Night</span><span class="dom">sheboygannight.com</span></a><a href="/about/"><span>About</span></a>
+  </nav>
+</header>
+
+<section class="band">
+  <img class="bg" src="https://raw.githubusercontent.com/ishevegas-max/sheboyganite/main/public/images/downtown.jpg" alt="Downtown Sheboygan street at night"/>
+  <div class="shade"></div>
+  <div class="wrap copy">
+    <p class="kicker">sheboygannight.com · night desk</p>
+    <h1>After dark in Sheboygan.</h1>
+    <p class="lede">Written for people from here. Not a tourism brochure. Hours change — walk in, or call the room.</p>
+  </div>
+</section>
+<section class="note"><div class="wrap inner"><div><p class="kicker">Desk note · Tuesday</p><h2 style="font-size:2rem;margin-top:.6rem">Tonight</h2></div><p>8th Streatery season is done for 2026. Treat Tuesday as a cocktail night — Urbane or Long House.</p></div></section>
+<main class="wrap" style="padding-bottom:4rem">
+  <div class="chips" id="chips">
+    <button class="on" data-f="all">All rooms</button>
+    <button data-f="cocktails">Cocktails</button>
+    <button data-f="beer">Beer</button>
+    <button data-f="dive">Dive</button>
+    <button data-f="pub">Pub</button>
+    <button data-f="lakefront">Lakefront</button>
+    <button data-f="live">Live</button>
+  </div>
+  <div class="rooms" id="rooms"><article class="room" data-kind="cocktails" data-slug="urbane"><p class="kicker">cocktails</p><h3>Urbane</h3><p class="where">Downtown</p><p>The cocktail room people actually name when you ask where to drink. Tight list, not a sports bar.</p></article><article class="room" data-kind="beer" data-slug="3-sheeps"><p class="kicker">beer</p><h3>3 Sheeps Brewing</h3><p class="where">South side</p><p>House beer, taproom, sometimes a food truck in the lot. Not downtown — worth the drive.</p><p><a href="https://3sheepsbrewing.com" target="_blank" rel="noreferrer">Site →</a></p></article><article class="room" data-kind="beer" data-slug="8th-street-ale-haus"><p class="kicker">beer</p><h3>8th Street Ale Haus</h3><p class="where">8th Street</p><p>Downtown beer room. Regulars put it next to Craft 30 when the question is where is the beer.</p></article><article class="room" data-kind="beer" data-slug="craft-30"><p class="kicker">beer</p><h3>Craft 30</h3><p class="where">Downtown</p><p>Serious tap list. Pair with Ale Haus if you are walking 8th.</p></article><article class="room" data-kind="dive" data-slug="gms"><p class="kicker">dive</p><h3>GM&#x27;s</h3><p class="where">8th Street</p><p>Downtown dive with a following. Thirsty Thursday is a local habit. Prices and bartenders are the point.</p></article><article class="room" data-kind="live" data-slug="downtown-925"><p class="kicker">live</p><h3>Downtown 925</h3><p class="where">8th Street</p><p>Wisconsin dining, Old Fashioneds, live music. A room that still feels like a night out.</p><p><a href="https://www.downtown925.com" target="_blank" rel="noreferrer">Site →</a></p></article><article class="room" data-kind="lakefront" data-slug="harbor-lights"><p class="kicker">lakefront</p><h3>Harbor Lights</h3><p class="where">Harbor</p><p>By the water. Go when the lake is the reason you left the house.</p></article><article class="room" data-kind="pub" data-slug="hops-haven"><p class="kicker">pub</p><h3>Hop&#x27;s Haven</h3><p class="where">Downtown</p><p>Pool, beer, a place to stay a while. Not trying to be a scene.</p></article><article class="room" data-kind="pub" data-slug="frankies"><p class="kicker">pub</p><h3>Frankie&#x27;s Pub &amp; Grill</h3><p class="where">Sheboygan</p><p>Pub-and-grill standby. Food if the night started as dinner.</p></article><article class="room" data-kind="pub" data-slug="brennans"><p class="kicker">pub</p><h3>Brennan&#x27;s</h3><p class="where">Michigan Avenue</p><p>Michigan Avenue regular. Named whenever someone is mapping bars near the old nightclub strip.</p></article><article class="room" data-kind="cocktails" data-slug="long-house"><p class="kicker">cocktails</p><h3>Long House Axe Bar</h3><p class="where">Sheboygan</p><p>Locals will tell you the drinks are among the best in town. Not a downtown tourist stop.</p></article><article class="room" data-kind="live" data-slug="prohibition"><p class="kicker">live</p><h3>Prohibition Bistro</h3><p class="where">River</p><p>Pizza on the river. A night that can still be dinner.</p></article><article class="room" data-kind="pub" data-slug="penn-ave"><p class="kicker">pub</p><h3>Penn Avenue Pub</h3><p class="where">Penn Ave</p><p>Sports hangout, Wisconsin teams, classic pub fare. For the game, not the scene.</p></article><article class="room" data-kind="pub" data-slug="nzs"><p class="kicker">pub</p><h3>NZ&#x27;s</h3><p class="where">Sheboygan</p><p>Named, unprompted, as some of the best bar food in town.</p></article><article class="room" data-kind="dive" data-slug="suschas"><p class="kicker">dive</p><h3>Suscha&#x27;s</h3><p class="where">Sheboygan</p><p>Old-school townie bar. If you are from here, you already know.</p></article><article class="room" data-kind="lakefront" data-slug="scenic"><p class="kicker">lakefront</p><h3>Scenic Bar &amp; Restaurant</h3><p class="where">Lakefront</p><p>A sit-down night by the water. Not a club. Still counts.</p></article></div>
+</main>
+<script>
+const chips=document.getElementById('chips');
+const rooms=[...document.querySelectorAll('.room')];
+chips.addEventListener('click',e=>{
+  const b=e.target.closest('button'); if(!b) return;
+  chips.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));
+  const f=b.dataset.f;
+  rooms.forEach(r=> r.style.display = (f==='all'||r.dataset.kind===f)?'':'none');
+});
+</script>
+
+<footer class="site">
+  <div class="wrap grid">
+    <div>
+      <h3>Sheboyganite</h3>
+      <p class="meta">SheVegas · sheboyganite.com</p>
+      <p>Everything Sheboygan, for people from Sheboygan. Sheboygan, Wisconsin. Founded 2005 by Mike Brunette.</p>
+    </div>
+    <div>
+      <p class="kicker">Desks</p>
+      <ul>
+        <li><a href="/archive/">Archive <span class="meta">shevegas.com</span></a></li>
+        <li><a href="/civic/">Civic <span class="meta">shevegas.org</span></a></li>
+        <li><a href="/night/">Night <span class="meta">sheboygannight.com</span></a></li>
+        <li><a href="/videos/">Video reel</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="kicker">Desk</p>
+      <ul>
+        <li><a href="mailto:ishevegas@gmail.com">Submit a tip</a></li>
+        <li><a href="https://www.youtube.com/user/mikebrunette" target="_blank" rel="noreferrer">YouTube</a></li>
+        <li><a href="https://x.com/optimikeb" target="_blank" rel="noreferrer">X @optimikeb</a></li>
+        <li><a href="https://github.com/ishevegas-max/sheboyganite" target="_blank" rel="noreferrer">Source</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap legal"><span>SheVegas Baby.</span><span>© 2026 · working copy</span></div>
+</footer>
+</body></html>
